@@ -10,6 +10,5 @@ import java.util.Optional;
 @Repository
 public interface AddressRepository extends JpaRepository<Address, Integer> {
     Optional<Address> findById(int id);
-
     List<Address> findAllByOrderByIdDesc();
 }

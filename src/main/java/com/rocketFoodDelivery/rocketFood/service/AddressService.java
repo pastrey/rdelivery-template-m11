@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-
 @Service
 public class AddressService {
     AddressRepository addressRepository;
+
     @Autowired
     public AddressService(AddressRepository addressRepository){
         this.addressRepository = addressRepository;

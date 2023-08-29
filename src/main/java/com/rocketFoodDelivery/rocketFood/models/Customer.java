@@ -10,8 +10,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.annotations.UpdateTimestamp;
-
 import java.time.LocalDateTime;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -34,6 +34,7 @@ public class Customer {
 
     @Column(columnDefinition = "boolean default true")
     private boolean active;
+
     @Column(nullable = false)
     private String phone;
 
@@ -41,10 +42,9 @@ public class Customer {
     @Column(nullable = false)
     private String email;
 
-
-
     @CreationTimestamp
     private LocalDateTime createdOn;
+
     @UpdateTimestamp
     private LocalDateTime updateOn;
 }
