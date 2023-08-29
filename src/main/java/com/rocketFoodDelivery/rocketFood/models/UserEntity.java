@@ -10,8 +10,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
-
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,12 +21,16 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(unique = true) // Set email as unique
     private String name;
+
+    @Column(unique = true)
     private String email;
+
     private String password;
+
     @CreationTimestamp
     private LocalDateTime createdOn;
+
     @UpdateTimestamp
     private LocalDateTime updateOn;
 }
