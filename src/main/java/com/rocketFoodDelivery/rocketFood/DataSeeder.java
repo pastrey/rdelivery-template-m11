@@ -26,6 +26,13 @@ public class DataSeeder {
 
         @PostConstruct
         public void seedData() {
+
+                // Clear existing data from the database
+                customerRepository.deleteAll();
+                userRepository.deleteAll();
+                addressRepository.deleteAll();
+
+                // Seed new data
                 UserEntity user = UserEntity.builder()
                                 .name("John Doe")
                                 .email("john.doe@codeboxx.com")
